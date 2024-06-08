@@ -8,12 +8,14 @@
   </head>
   <body">
     <main class="bg-yellow-400/90 min-h-screen flex justify-center items-center">
-      <div class="bg-white rounded-3xl w-80 border-black border p-4 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
-        <img src="./assets/images/illustration-article.svg" alt="illustration-article" class="rounded-xl mb-8 " >
+      <div class="bg-white rounded-3xl w-80 border-black border hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] p-4 shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]">
+          <img src="./assets/images/illustration-article.svg" alt="illustration-article" class=" cursor-pointer rounded-xl mb-8 " >
         <div>
-          <span class="mt-4 px-4 py-2 font-bold rounded bg-yellow-400">Learning</span>
+          <a href="#" class="cursor-pointer">
+            <span class="mt-4 px-4 py-2 font-bold rounded bg-yellow-400">Learning</span>
+          </a>
           <p class="mt-4 font-medium">Published 21 Dec 2023</p>
-          <h2 class="mt-4 font-extrabold text-2xl">HTML & CSS foundations</h2>
+          <a href="#"><h2 class="mt-4 font-extrabold text-2xl hover:text-yellow-400">HTML & CSS foundations</h2></a>
           <p class="text-gray-500 text-sm mt-4">These languages are the backbone of every website, defining structure,content and presentation.</p>
         </div>
         <div class="flex items-center mt-4 gap-4">
@@ -23,4 +25,13 @@
       </div>
     </main>
   </body>
+  <style>
+     .container {
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .trigger-shadow:hover ~ .container {
+    box-shadow: 10px 10px 0px 0px rgba(255, 255, 255, 0);
+  }
+  </style>
 </html>
